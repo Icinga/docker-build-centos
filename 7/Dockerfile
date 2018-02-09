@@ -9,7 +9,7 @@ RUN yum install -y \
   sudo wget curl which tar expect git \
   patch rpm-build redhat-rpm-config rpmlint \
   patch ccache make util-linux \
-  yum-utils yum-plugin-ovl \
+  yum-utils yum-plugin-ovl rpmdevtools \
  && yum clean all
 
 RUN yum install -y \
