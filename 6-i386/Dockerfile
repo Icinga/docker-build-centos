@@ -11,8 +11,9 @@ RUN echo '%build_icinga_org 1' >/etc/rpm/macros.icinga_build
 RUN yum install -y \
   sudo wget curl which tar expect git \
   patch rpm-build redhat-rpm-config rpmlint \
-  patch ccache make util-linux \
+  patch make util-linux \
   yum-utils yum-plugin-ovl rpmdevtools \
+  epel-release \
  && yum clean all
 
 RUN yum install -y \
@@ -21,7 +22,6 @@ RUN yum install -y \
   cmake \
   openssl-devel \
   mysql-devel \
-  wxGTK3-devel \
   yajl-devel \
   libedit-devel \
   ccache \
