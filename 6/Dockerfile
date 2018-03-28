@@ -31,3 +31,6 @@ RUN groupadd -g 1000 jenkins \
 
 RUN wget -O /etc/yum.repos.d/ICINGA-release.repo \
  https://packages.icinga.com/epel/ICINGA-release.repo
+
+RUN wget -O /etc/yum.repos.d/devtoolset-2.repo https://people.centos.org/tru/devtools-2/devtools-2.repo \
+ && yum install -y devtoolset-2-gcc devtoolset-2-gcc-c++ devtoolset-2-binutils
